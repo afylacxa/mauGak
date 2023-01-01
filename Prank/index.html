@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        body{
+
+            text-align: center;
+            align-items: center;
+        }
+        .container{
+            height: 100vh;
+            background: rgb(238,174,202);
+            background: linear-gradient(124deg, rgba(238,174,202,1) 0%, rgba(175,242,189,1) 30%, rgba(217,181,218,1) 64%, rgba(148,187,233,1) 100%);
+        }
+        button{
+            display: inline-block;
+            text-align: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+        img{
+            margin: 10px;
+        }
+        .mau{
+            padding: 9px 8px ;
+            margin-left: -60px;
+        }
+        .gak{
+            margin:  0 4px;
+            padding: 9px 8px;
+        }
+        
+        </style>
+        <title>Mau Gak?</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Hai</h1>
+            <img src="giphy.gif" alt="gif-oi">
+            <h3>Mau jalan ga?</h3>
+                <button id="mau" onclick="mau()" class="mau">Gak Mau</button>
+                <button id="gak" onclick="gak(this)" style="position:fixed;" class="gak">Ayo</button>
+        </div>
+        
+        
+        <script>
+            function gak(id){
+                var mau = document.getElementById("mau");
+                var i = Math.floor(Math.random()*300)+1;
+                var j = Math.floor(Math.random()*100) + mau.offsetTop;
+                id.style.left = i + 'px';
+                id.style.top = j + 'px';
+            }
+
+            function mau(){
+                alert('yahha hayuk 😋.')
+            }
+        </script>
+</html>
